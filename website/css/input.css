@@ -1,4 +1,6 @@
 .input{
-    background-color: blue;
-    height: 100vh;
+    /* background: linear-gradient(to top, #950ec2, #c777e2); */
+    background-color: #013a63;
+    height: 96vh;
+    border-radius: 10px;
 }

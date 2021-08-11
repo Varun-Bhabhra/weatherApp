@@ -7,7 +7,7 @@ let cityNameValue = "";
 // Variable Decleration
 let inputName = document.querySelector("#name")
 let generateButton = document.querySelector('button');
-let tempText = document.querySelector('#temp');
+let tempText = document.querySelector('.main');
 
 // Events and Functions
 inputName.addEventListener('change', function () {
