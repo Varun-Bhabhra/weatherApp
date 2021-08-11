@@ -26,4 +26,5 @@ const getWeather = async () => {
         console.log('error', err)
     }
 }
+
 generateButton.addEventListener("click", getWeather);
