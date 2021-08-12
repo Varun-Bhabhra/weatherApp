@@ -15,23 +15,25 @@
 <body>
     <div id="card">
         <div class="input">
-            <div>
-                <label for="name">Enter City Name / zip - </label>
-                <input type="text" id="name" value="">
+            <div class="zipCode">
+                <label for="name" class="ask">Enter City Name / zip - </label>
+                <input type="text" id="name" value="" placeholder="city / zip">
             </div>
 
-            <label for="ask">How are you feeling today ?</label>
-            <div class="options">
-                <input type="radio" name=".." id="1">
-                <label for="1">Enjoyment</label>
-                <input type="radio" name=".." id="2">
-                <label for="2">Sadness</label>
-                <input type="radio" name=".." id="3">
-                <label for="3">Fear</label>
-                <input type="radio" name=".." id="4">
-                <label for="4">Anger</label>
-                <input type="radio" name=".." id="5">
-                <label for="5">Joyful</label>
+            <div class="middle">
+                <p for="ask">How are you feeling today ?</p>
+                <div class="options">
+                    <input type="radio" name=".." value="happy" id="1">
+                    <label for="1"> I feel great today! </label><br>
+                    <input type="radio" name=".." value="angry" id="2">
+                    <label for="2"> Want to kill you :) </label><br>
+                    <input type="radio" name=".." value="happy" id="3">
+                    <label for="3"> I am completely relaxed </label><br>
+                    <input type="radio" name=".." value="angry" id="4">
+                    <label for="4"> What the fu*k going on ? </label><br>
+                    <input type="radio" name=".." value="angry" id="5">
+                    <label for="5"> I feel terrific today! </label><br>
+                </div>
             </div>
 
             <button>Generate</button>

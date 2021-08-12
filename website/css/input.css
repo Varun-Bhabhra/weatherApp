@@ -7,7 +7,68 @@
     display: grid;
 }
 
-.options{
-    display: flex;
+.ask{
+    background-color: #ffbf69;
+}
 
+.zipCode{
+    margin: 20px;
+    padding: 20px;
+    display: grid;
+    justify-items: center;
+}
+
+input{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffe0ad;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.middle{
+    margin: 10px;
+    padding: 20px;
+    align-items: left;
+    line-height: 40px;
+}
+
+.middle p {
+    background-color: #ffbf69;
+}
+
+.options{
+    padding-top: 40px;
+    line-height: 60px;
+}
+
+.helo:hover{
+    /* transition: 0.1s; */
+    border: 1px solid #444;
+}
+
+button{
+    width: 20rem;
+    height: 6rem;
+    margin: 20px 40px;
+    padding: 20px;
+    border: none;
+    font-weight: bolder;
+    background-color: #ffbf69;
+    color: #343A40;
+    border-radius: 30px;
+    font-size: 35px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    transition: 0.5s ease-out;
+    width: 20.1rem;
+    height: 6.1rem;
+    box-shadow: 0px 0px 20px 5px #444;
 }
