@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @import './input.css';
 @import './output.css';
-
 
 *{
     box-sizing: border-box;
@@ -9,9 +10,11 @@
 }
 
 body{
-    /* background: linear-gradient(to top, #800080, #ffc0cb);  */
-    background-color: #10002b;
-    color:#fff;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 4px;
+    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
+    background-color: #A06CD5;
+    color:#343A40;
     overflow: hidden;
     margin: 20px;
 }

@@ -1,6 +1,13 @@
 .input{
-    /* background: linear-gradient(to top, #950ec2, #c777e2); */
-    background-color: #013a63;
+    background: linear-gradient(to bottom, #9163CB, #B185DB);
     height: 96vh;
     border-radius: 10px;
+    box-shadow: 0px 0px 15px 2px #444;
+    font-size: 25px;
+    display: grid;
+}
+
+.options{
+    display: flex;
+
 }

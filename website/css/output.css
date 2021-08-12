@@ -4,16 +4,18 @@
     grid-gap: 20px;
 }
 
-.main{
-    /* background: linear-gradient(to top, #950ec2, #c777e2); */
-    background-color: #014f86;
+.main {
+    background: linear-gradient(to bottom, #9163CB, #B185DB);
     border-radius: 10px;
-
+    box-shadow: 0px 0px 15px 2px #444;
+    color: #fff;
+}
+.others {
+    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px #444;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
 }
 
-.others{
-    /* background: linear-gradient(to bottom, #950ec2, #c777e2); */
-    background-color: #014f86;
-
-    border-radius: 10px;
-}

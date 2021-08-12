@@ -20,7 +20,7 @@ const getWeather = async () => {
     try {
         const allData = await response.json()
         const temperature = Number(allData.main.temp);
-        tempText.innerHTML = Math.trunc(temperature - 272.15) + ' C';
+        tempText.innerHTML = Math.trunc(temperature - 272.15) + ' C°';
         // console.log(temperature)
     } catch (err) {
         console.log('error', err)

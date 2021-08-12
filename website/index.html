@@ -15,15 +15,36 @@
 <body>
     <div id="card">
         <div class="input">
-            <label for="name">Enter City Name / zip - </label>
-            <input type="text" id="name" value="">
+            <div>
+                <label for="name">Enter City Name / zip - </label>
+                <input type="text" id="name" value="">
+            </div>
+
+            <label for="ask">How are you feeling today ?</label>
+            <div class="options">
+                <input type="radio" name=".." id="1">
+                <label for="1">Enjoyment</label>
+                <input type="radio" name=".." id="2">
+                <label for="2">Sadness</label>
+                <input type="radio" name=".." id="3">
+                <label for="3">Fear</label>
+                <input type="radio" name=".." id="4">
+                <label for="4">Anger</label>
+                <input type="radio" name=".." id="5">
+                <label for="5">Joyful</label>
+            </div>
+
             <button>Generate</button>
-            <label for="feel">How are you feeling today ? </label>
-            <input type="text" id="feel">
         </div>
         <div class="output">
-            <h1 class="main">One</h1>
-            <h1 class="others">Two</h1>
+            <div class="main">
+                <h1 class="">One</h1>
+            </div>
+            <div class="others">
+                <h1 class="minTemp">Min Temp.</h1>
+                <h1 class="maxTemp">Max Temp.</h1>
+                <h1 class="humidity">Humidity</h1>
+            </div>
         </div>
     </div>
 
