@@ -5,10 +5,9 @@
 }
 
 .main {
-    background: linear-gradient(to bottom, #9163CB, #B185DB);
+    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
     border-radius: 10px;
     box-shadow: 0px 0px 15px 2px #444;
-    color: #fff;
 }
 .others {
     background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);

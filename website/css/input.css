@@ -1,5 +1,5 @@
 .input{
-    background: linear-gradient(to bottom, #9163CB, #B185DB);
+    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
     height: 96vh;
     border-radius: 10px;
     box-shadow: 0px 0px 15px 2px #444;
@@ -16,25 +16,33 @@
     padding: 20px;
     display: grid;
     justify-items: center;
+    /* border: 5px solid #212529; */
+    box-shadow: 0px 0px 5px 2px #212529;
+    border-radius: 10px;
 }
 
 input{
     font-family: 'Roboto', sans-serif;
-    background-color: #ffe0ad;
+    background-color: #D2B7E5;
     font-size: 15px;
     font-weight: bolder;
     text-align: center;
     margin-top: 30px;
     padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
+}
+
+input:focus{
+    border: none;
 }
 
 .middle{
     margin: 10px;
-    padding: 20px;
+    padding: 18px;
     align-items: left;
     line-height: 40px;
+    /* border: 1px solid #212529; */
 }
 
 .middle p {
@@ -52,23 +60,21 @@ input{
 }
 
 button{
-    width: 20rem;
-    height: 6rem;
-    margin: 20px 40px;
+    width: 17rem;
+    height: 5rem;
+    margin: 20px 60px;
     padding: 20px;
     border: none;
-    font-weight: bolder;
+    font-size: 30px;
+    font-weight: bold;
     background-color: #ffbf69;
     color: #343A40;
     border-radius: 30px;
-    font-size: 35px;
     letter-spacing: 5px;
     cursor: pointer;
 }
 
 button:hover{
     transition: 0.5s ease-out;
-    width: 20.1rem;
-    height: 6.1rem;
     box-shadow: 0px 0px 20px 5px #444;
 }
