@@ -31,12 +31,15 @@ input{
     padding: 10px;
     border: none;
     border-radius: 25px;
+    text-transform: uppercase;
 }
 
 input:focus{
-    border: none;
+    outline: none;
+    background-color: #fff;
 }
 
+/* Lower half of the input section  */
 .middle{
     margin: 10px;
     padding: 18px;
