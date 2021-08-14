@@ -1,11 +1,13 @@
 .output{
-    /* grid-area: right; */
+    font-family: 'Roboto', sans-serif;
+    color: #212529;
     display: grid;
-    grid-template-rows: 2, auto;
-    grid-gap: 20px;
+    grid-template-rows: 25.5rem 25.5rem ;
+    grid-gap: 15px;
 }
 
 .mainTemp {
+    padding: 30px;
     background: linear-gradient(to bottom, #7251B5, #D2B7E5);
     border-radius: 10px;
     box-shadow: 0px 0px 15px 2px #444;
@@ -17,4 +19,33 @@
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-items: center;
+}
+
+/* JS CLASSES STYLE  */
+.date{
+    display: inline;
+    width: 17.8rem;
+    /* color: #343A40; */
+}
+
+.cityName{
+    display: block;
+    width: 20rem;
+    margin: 5px;
+    padding: 5px;
+}
+
+.mainTemperature{
+    margin: 10px;
+    font-family: 'Patua One', cursive;
+    font-size: 8rem;
+    font-weight: bolder;
+}
+
+.currentClimate{
+    color: #343A40;
+    font-size: 3rem;
+    font-weight: bold;
+    border-top: 3px solid #343A40;
+    border-bottom: 3px solid #343A40;
 }
