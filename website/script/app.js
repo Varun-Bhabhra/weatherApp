@@ -2,7 +2,7 @@
 let apiKey = '32363641d307b29e83a5321ec18c1249'
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?q='
 let finalApiKey = `&appid=${apiKey}`;
-let cityNameValue = "";
+let cityNameValue = "mumbai";
 
 // Constant Selectors
 const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -20,12 +20,18 @@ const humidity = document.querySelector('.humidity')
 let d = new Date();
 let date = `${d.getDate()} ${monthNames[d.getMonth()]},${d.getFullYear()}`;
 
-let temp = document.createElement('H1')
+let temp = document.createElement('H1');
 temp.setAttribute('class', 'mainTemperature');
+
+let cityName = document.createElement('H1');
+cityName.setAttribute('class', 'cityName');
+
+let countryName = document.createElement('H1');
+countryName.setAttribute('class', 'countryName');
 
 // Events and Function Calls
 inputName.addEventListener('change', function () {
-    cityNameValue = inputName.value
+    // cityNameValue = inputName.value
 })
 const getWeather = async () => {
     let finalURL = baseURL + cityNameValue + finalApiKey
@@ -40,6 +46,15 @@ const getWeather = async () => {
         const { country } = sys;
 
         console.log(`Name - ${name}\nLongitude - ${lon}\nLatitude - ${lat}\nMax-Temperature - ${temp_max}\nMin-Temperature - ${temp_min}\nHumidity - ${humidity}\nWeather - ${weather[0].main}\nCountry - ${country}`);
+
+        // Appending City Name
+        let city = mainTemp.appendChild(cityName)
+        let countri = mainTemp.appendChild(countryName);
+        city.innerText = name;
+        countri.innerText = country;
+
+        // Appending Date
+        mainTemp.append(date);
 
         // Appending Main Temperature
         mainTemp.appendChild(temp).innerText = Math.trunc(temperature - 272.15) + ' C°';
