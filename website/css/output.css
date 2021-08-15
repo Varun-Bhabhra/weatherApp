@@ -1,5 +1,4 @@
 .output{
-    font-family: 'Roboto', sans-serif;
     color: #212529;
     display: grid;
     grid-template-rows: 25.5rem 25.5rem ;
@@ -7,7 +6,7 @@
 }
 
 .mainTemp {
-    padding: 30px;
+    padding: 10px 20px 20px 20px;
     background: linear-gradient(to bottom, #7251B5, #D2B7E5);
     border-radius: 10px;
     box-shadow: 0px 0px 15px 2px #444;
@@ -26,7 +25,7 @@
     margin-bottom: 1rem;
     padding: 10px;
     font-size: 15px;
-    width: 12rem;
+    width: 14rem;
     border-radius: 10px;
     background-color: #ffbf69;
 }
@@ -36,14 +35,13 @@
     width: 20rem;
     margin: 5px;
     padding: 5px;
-    /* border-bottom: 3px solid #343A40; */
+    text-transform: uppercase;
 }
 
 .mainTemperature{
     margin: 10px;
-    font-family: 'Patua One', cursive;
     font-size: 8rem;
-    font-weight: lighter;
+    font-weight: normal;
     display: flex;
     justify-content: space-between;
 }
@@ -57,7 +55,7 @@
 }
 
 .dummyCode{
-    padding-top: 15px;
+    padding-top: 25px;
     opacity: 0.75;
     font-weight: bolder;
     display: flex;
@@ -79,6 +77,7 @@
 }
 
 .othersDiv{
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-flow: column wrap;
@@ -88,7 +87,8 @@
 
 .tempHead{
     font-size: 30px;
-    border-bottom: 0.3pc solid #343A40;
+    font-weight: normal;
+    border-bottom: 2px solid #343A40;
 }
 
 .minIcon{
@@ -97,8 +97,8 @@
 }
 
 .tempHeadText{
-    font-family: 'Patua One', cursive;
     font-size: 2rem;
-    border-top: 5px solid #343A40;
-    border-bottom: 5px solid #343A40;
+    font-weight: normal;
+    border-top: 2px solid #343A40;
+    border-bottom: 2px solid #343A40;
 }

@@ -10,7 +10,6 @@ const monthNames = ["January", "February", "March", "April", "May", "June",
 const inputName = document.querySelector("#name")
 const generateButton = document.querySelector('button');
 const mainTemp = document.querySelector('.mainTemp');
-const others = document.querySelector('.others');
 const minTemp = document.querySelector('.minTemp');
 const maxTemp = document.querySelector('.maxTemp');
 const humidity = document.querySelector('.humidity');
@@ -43,30 +42,11 @@ dummyCode.setAttribute('class', 'dummyCode');
 let latLon = document.createElement('SPAN');
 latLon.setAttribute('class', 'lat_lon');
 
-let mainOthersDiv;
-
-// Creating Elements & Appending inside Lower - Half
-// let mainOthersDiv = document.createElement('DIV');
-// mainOthersDiv.setAttribute('class', 'othersDiv');
-
-// const minTempHead = document.createElement('H2');
-// minTempHead.setAttribute('class', 'minTempHead');
-// minTempHead.innerText = 'MIN TEMP.';
-
-// const minTempIcon = document.createElement('P');
-// minTempIcon.setAttribute('class', 'minIcon');
-// minTempIcon.innerHTML = '<i class="fas fa-temperature-low"></i>';
-
-// const minTemperature = document.createElement('P');
-// minTemperature.setAttribute('class', 'minTemperature');
-
-// mainOthersDiv.appendChild(minTempHead);
-// mainOthersDiv.appendChild(minTempIcon);
-// others.appendChild(mainOthersDiv);
-
 function gettingTempValues(min, max, humidity) {
+    let others = document.querySelector('.others');
+
     for (let i = 0; i < 3; i++) {
-        mainOthersDiv = document.createElement('DIV');
+        let mainOthersDiv = document.createElement('DIV');
         mainOthersDiv.setAttribute('class', 'othersDiv');
 
         const tempHead = document.createElement('H2');
@@ -83,7 +63,7 @@ function gettingTempValues(min, max, humidity) {
 
                 tempHead.innerText = 'MIN TEMP.';
                 minTempIcon.innerHTML = '<i class="fas fa-temperature-low"></i>'
-                tempHeadText.innerText = min
+                tempHeadText.innerText = `${Math.trunc(min - 272.15)}°`;
 
                 break;
             case 1:
@@ -97,7 +77,7 @@ function gettingTempValues(min, max, humidity) {
 
                 tempHead.innerText = 'MAX TEMP.';
                 minTempIcon.innerHTML = '<i class="fas fa-temperature-high"></i>'
-                tempHeadText.innerText = max
+                tempHeadText.innerText = `${Math.trunc(max - 272.15)}°`;
 
                 break;
         }
@@ -106,7 +86,7 @@ function gettingTempValues(min, max, humidity) {
         mainOthersDiv.appendChild(tempHeadText)
         mainOthersDiv.appendChild(minTempIcon);
         others.appendChild(mainOthersDiv);
-        console.log(mainOthersDiv)
+        // console.log(mainOthersDiv)
     }
 }
 
@@ -124,11 +104,11 @@ const getWeather = async () => {
         const { temp_min, temp_max, humidity } = main;
         const { country } = sys;
 
-        console.log(`Name - ${name}\nLongitude - ${lon}\nLatitude - ${lat}\nMax-Temperature - ${temp_max}\nMin-Temperature - ${temp_min}\nHumidity - ${humidity}\nWeather - ${weather[0].main}\nCountry - ${country}`);
+        console.log(`Name - ${name} \nLongitude - ${lon} \nLatitude - ${lat} \nMax - Temperature - ${temp_max} \nMin - Temperature - ${temp_min} \nHumidity - ${humidity} \nWeather - ${weather[0].main} \nCountry - ${country} `);
 
         // Appending City Name
         let city = mainTemp.appendChild(cityName)
-        city.innerText = `${name}, ${country}`;
+        city.innerText = `${name}, ${country} `;
 
         // Appending Main Temperature
         mainTemp.appendChild(temp).innerText = Math.trunc(temperature - 272.15) + '°';
@@ -152,22 +132,15 @@ const getWeather = async () => {
 
         // Appending Current Climate
         let current_climate = mainTemp.appendChild(currentClimate);
-        current_climate.innerText = `Mostly ${weather[0].main}`;
+        current_climate.innerText = `Mostly ${weather[0].main} `;
 
         // Appending dummy code
         let dummy = mainTemp.appendChild(dummyCode);
-        dummy.innerText = `17% chance to rain later`;
+        dummy.innerText = `17 % chance to rain later`;
         let latiLongi = dummy.appendChild(latLon);
-        latiLongi.innerText = `${lon}/${lat}`;
+        latiLongi.innerText = `${lon} /${lat}`;
 
         gettingTempValues(temp_min, temp_max, humidity);
-
-
-        // Items for the other-half
-        // let minTempVal = mainOthersDiv.appendChild(minTemperature);
-        // minTempVal.innerText = `${temp_min}`;
-
-
     } catch (err) {
         console.log('error', err)
     }
