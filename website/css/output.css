@@ -21,6 +21,8 @@
 /* JS CLASSES STYLE  */
 .date{
     display: block;
+    text-align: center;
+    margin-left: 45rem;
     margin-bottom: 1rem;
     padding: 10px;
     font-size: 15px;
@@ -55,9 +57,15 @@
 }
 
 .dummyCode{
-    text-align: right;
+    padding-top: 15px;
     opacity: 0.75;
     font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lat_lon{
+    padding-right: 2rem;
 }
 
 /* Lower Bottom Styles  */
@@ -68,4 +76,29 @@
     display: grid;
     grid-template-columns: 33% 33% auto;
     justify-items: center;
+}
+
+.othersDiv{
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tempHead{
+    font-size: 30px;
+    border-bottom: 0.3pc solid #343A40;
+}
+
+.minIcon{
+    font-size: 7rem;
+    font-weight: lighter;
+}
+
+.tempHeadText{
+    font-family: 'Patua One', cursive;
+    font-size: 2rem;
+    border-top: 5px solid #343A40;
+    border-bottom: 5px solid #343A40;
 }

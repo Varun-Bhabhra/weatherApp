@@ -24,7 +24,7 @@ fixedDate.setAttribute('class', 'date')
 fixedDate.append(date)
 mainTemp.append(fixedDate);
 
-// Creating Elements to append
+// Creating Elements to append Upper-Half
 let cityName = document.createElement('H1');
 cityName.setAttribute('class', 'cityName');
 
@@ -39,6 +39,76 @@ currentClimate.setAttribute('class', 'currentClimate');
 
 const dummyCode = document.createElement('P');
 dummyCode.setAttribute('class', 'dummyCode');
+
+let latLon = document.createElement('SPAN');
+latLon.setAttribute('class', 'lat_lon');
+
+let mainOthersDiv;
+
+// Creating Elements & Appending inside Lower - Half
+// let mainOthersDiv = document.createElement('DIV');
+// mainOthersDiv.setAttribute('class', 'othersDiv');
+
+// const minTempHead = document.createElement('H2');
+// minTempHead.setAttribute('class', 'minTempHead');
+// minTempHead.innerText = 'MIN TEMP.';
+
+// const minTempIcon = document.createElement('P');
+// minTempIcon.setAttribute('class', 'minIcon');
+// minTempIcon.innerHTML = '<i class="fas fa-temperature-low"></i>';
+
+// const minTemperature = document.createElement('P');
+// minTemperature.setAttribute('class', 'minTemperature');
+
+// mainOthersDiv.appendChild(minTempHead);
+// mainOthersDiv.appendChild(minTempIcon);
+// others.appendChild(mainOthersDiv);
+
+function gettingTempValues(min, max, humidity) {
+    for (let i = 0; i < 3; i++) {
+        mainOthersDiv = document.createElement('DIV');
+        mainOthersDiv.setAttribute('class', 'othersDiv');
+
+        const tempHead = document.createElement('H2');
+        tempHead.setAttribute('class', 'tempHead');
+
+        const tempHeadText = document.createElement('H3');
+        tempHeadText.setAttribute('class', 'tempHeadText');
+
+        const minTempIcon = document.createElement('P');
+        minTempIcon.setAttribute('class', 'minIcon');
+
+        switch (i) {
+            case 0:
+
+                tempHead.innerText = 'MIN TEMP.';
+                minTempIcon.innerHTML = '<i class="fas fa-temperature-low"></i>'
+                tempHeadText.innerText = min
+
+                break;
+            case 1:
+
+                tempHead.innerText = 'HUMIDITY';
+                minTempIcon.innerHTML = '<i class="fas fa-tint"></i>'
+                tempHeadText.innerText = humidity
+
+                break;
+            case 2:
+
+                tempHead.innerText = 'MAX TEMP.';
+                minTempIcon.innerHTML = '<i class="fas fa-temperature-high"></i>'
+                tempHeadText.innerText = max
+
+                break;
+        }
+
+        mainOthersDiv.appendChild(tempHead);
+        mainOthersDiv.appendChild(tempHeadText)
+        mainOthersDiv.appendChild(minTempIcon);
+        others.appendChild(mainOthersDiv);
+        console.log(mainOthersDiv)
+    }
+}
 
 // Events and Function Calls
 inputName.addEventListener('change', () => cityNameValue = inputName.value)
@@ -85,21 +155,17 @@ const getWeather = async () => {
         current_climate.innerText = `Mostly ${weather[0].main}`;
 
         // Appending dummy code
-        if (weather[0].main === 'Haze') {
-            let dummy = mainTemp.appendChild(dummyCode);
-            dummy.innerText = '17% chance to rain later'
-        } else if (weather[0].main === 'Clouds') {
-            let dummy = mainTemp.appendChild(dummyCode);
-            dummy.innerText = '79% chance to rain later'
-        } else if (weather[0].main === 'Clear') {
-            let dummy = mainTemp.appendChild(dummyCode);
-            dummy.innerText = '6% chance to rain later'
-        } else {
-            let dummy = mainTemp.appendChild(dummyCode);
-            dummy.innerText = '2% chance to rain later'
-        }
+        let dummy = mainTemp.appendChild(dummyCode);
+        dummy.innerText = `17% chance to rain later`;
+        let latiLongi = dummy.appendChild(latLon);
+        latiLongi.innerText = `${lon}/${lat}`;
+
+        gettingTempValues(temp_min, temp_max, humidity);
+
 
         // Items for the other-half
+        // let minTempVal = mainOthersDiv.appendChild(minTemperature);
+        // minTempVal.innerText = `${temp_min}`;
 
 
     } catch (err) {
