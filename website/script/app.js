@@ -30,11 +30,13 @@ cityName.setAttribute('class', 'cityName');
 let temp = document.createElement('H1');
 temp.setAttribute('class', 'mainTemperature');
 
-let currentClimate = document.createElement('SPAN')
-currentClimate.setAttribute('class', 'currentClimate')
+let currentClimate = document.createElement('SPAN');
+currentClimate.setAttribute('class', 'currentClimate');
+
+const dummyCode = document.createElement('P');
+dummyCode.setAttribute('class', 'dummyCode');
 
 // Events and Function Calls
-
 inputName.addEventListener('change', function () {
     cityNameValue = inputName.value
 })
@@ -61,6 +63,10 @@ const getWeather = async () => {
         // Appending Current Climate
         let current_climate = mainTemp.appendChild(currentClimate);
         current_climate.innerText = `Mostly ${weather[0].main}`;
+        // Appending dummy code 
+        let dummy = mainTemp.appendChild(dummyCode);
+        dummy.innerText = '16% chance to rain later'
+
 
     } catch (err) {
         console.log('error', err)

@@ -17,15 +17,19 @@
     border-radius: 10px;
     box-shadow: 0px 0px 20px 5px #444;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: 33% 33% auto;
     justify-items: center;
 }
 
 /* JS CLASSES STYLE  */
 .date{
-    display: inline;
-    width: 17.8rem;
-    /* color: #343A40; */
+    display: block;
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 15px;
+    width: 12rem;
+    border-radius: 10px;
+    background-color: #ffbf69;
 }
 
 .cityName{
@@ -33,6 +37,8 @@
     width: 20rem;
     margin: 5px;
     padding: 5px;
+    border-bottom: 3px solid #343A40;
+
 }
 
 .mainTemperature{
@@ -43,9 +49,15 @@
 }
 
 .currentClimate{
-    color: #343A40;
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: light;
     border-top: 3px solid #343A40;
     border-bottom: 3px solid #343A40;
+    opacity: 0.85;
+}
+
+.dummyCode{
+    padding-top: 15px;
+    opacity: 0.85;
+    font-weight: 3px;
 }
