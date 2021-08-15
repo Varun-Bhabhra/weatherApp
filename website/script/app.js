@@ -111,8 +111,6 @@ const getWeather = async () => {
         const { temp_min, temp_max, humidity } = main;
         const { country } = sys;
 
-        console.log(`Name - ${name} \nLongitude - ${lon} \nLatitude - ${lat} \nMax - Temperature - ${temp_max} \nMin - Temperature - ${temp_min} \nHumidity - ${humidity} \nWeather - ${weather[0].main} \nCountry - ${country} `);
-
         // Appending City Name
         let city = mainTemp.appendChild(cityName)
         city.innerText = `${name}, ${country} `;

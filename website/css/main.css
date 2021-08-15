@@ -10,9 +10,11 @@
 body{
     font-family: 'Roboto', cursive;
     letter-spacing: 4px;
-    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
-    background-color: #A06CD5;
-    color:#343A40;
+    /* background: linear-gradient(to bottom, #D2B7E5, #DEC9E9); */
+    /* background: linear-gradient(to bottom, #5f63da, #1BFFFF); */
+    /* background: linear-gradient(to top, #02AABD, #00CDAC); */
+    background-color: #2D6A4F;
+    color:#081C15;
     overflow: hidden;
     margin: 20px;
 }

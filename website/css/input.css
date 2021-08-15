@@ -1,5 +1,7 @@
 .input{
-    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
+    /* background: linear-gradient(to bottom, #7251B5, #D2B7E5); */
+    /* background: linear-gradient(to bottom, #2E3192, #1BFFFF); */
+    background: linear-gradient(to top, #11998E, #38EF7D);
     height: 96vh;
     border-radius: 10px;
     box-shadow: 0px 0px 15px 2px #444;
@@ -8,7 +10,7 @@
 }
 
 .ask{
-    background-color: #ffbf69;
+    background-color: #b0ffb0;
 }
 
 .zipCode{
@@ -16,13 +18,13 @@
     padding: 20px;
     display: grid;
     justify-items: center;
-    box-shadow: 0px 0px 5px 2px #212529;
+    box-shadow: 0px 0px 5px 2px #081C15;
     border-radius: 10px;
 }
 
 input{
     font-family: 'Roboto', sans-serif;
-    background-color: #D2B7E5;
+    background-color: #B7E4C7;
     font-size: 15px;
     font-weight: bolder;
     text-align: center;
@@ -47,7 +49,7 @@ input:focus{
 }
 
 .middle p {
-    background-color: #ffbf69;
+    background-color: #b0ffb0;
 }
 
 .options{
@@ -63,8 +65,8 @@ button{
     border: none;
     font-size: 30px;
     font-weight: bold;
-    background-color: #ffbf69;
-    color: #343A40;
+    background-color: #b0ffb0;
+    color: #081C15;
     border-radius: 30px;
     letter-spacing: 5px;
     cursor: pointer;
@@ -72,7 +74,7 @@ button{
 
 button:hover{
     transition: 0.5s ease-out;
-    box-shadow: 0px 0px 20px 5px #444;
+    box-shadow: 0px 0px 20px 5px #081C15;
 }
 button:focus{
     outline: none;

@@ -1,20 +1,22 @@
 .output{
-    color: #212529;
+    color: #081C15;
     display: grid;
-    grid-template-rows: 25.5rem 25.5rem ;
+    grid-template-rows: 23.5rem 23.5rem ;
     grid-gap: 15px;
 }
 
 .mainTemp {
     padding: 10px 20px 20px 20px;
-    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
+    /* background: linear-gradient(to bottom, #7251B5, #D2B7E5); */
+    /* background: linear-gradient(to bottom, #2E3192, #1BFFFF); */
+    background: linear-gradient(to bottom, #11998E, #38EF7D);
     border-radius: 10px;
-    box-shadow: 0px 0px 15px 2px #444;
+    box-shadow: 0px 0px 15px 2px #081C15;
 }
 
 .tempIcon{
     margin-right: 3rem;
-    color: #22223b;
+    color: #081C15;
 }
 
 /* JS CLASSES STYLE  */
@@ -27,7 +29,7 @@
     font-size: 15px;
     width: 14rem;
     border-radius: 10px;
-    background-color: #ffbf69;
+    background-color: #b0ffb0;
 }
 
 .cityName{
@@ -68,9 +70,11 @@
 
 /* Lower Bottom Styles  */
 .others {
-    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
+    /* background: linear-gradient(to bottom, #D2B7E5, #DEC9E9); */
+    /* background: linear-gradient(to top, #2E3192, #1BFFFF); */
+    background: linear-gradient(to top, #11998E, #38EF7D);
     border-radius: 10px;
-    box-shadow: 0px 0px 20px 5px #444;
+    box-shadow: 0px 0px 20px 5px #081C15;
     display: grid;
     grid-template-columns: 33% 33% auto;
     justify-items: center;
@@ -88,7 +92,7 @@
 .tempHead{
     font-size: 30px;
     font-weight: normal;
-    border-bottom: 2px solid #343A40;
+    border-bottom: 2px solid #081C15;
 }
 
 .minIcon{
@@ -99,6 +103,6 @@
 .tempHeadText{
     font-size: 2rem;
     font-weight: normal;
-    border-top: 2px solid #343A40;
-    border-bottom: 2px solid #343A40;
+    border-top: 2px solid #081C15;
+    border-bottom: 2px solid #081C15;
 }
