@@ -41,9 +41,7 @@ const dummyCode = document.createElement('P');
 dummyCode.setAttribute('class', 'dummyCode');
 
 // Events and Function Calls
-inputName.addEventListener('change', function () {
-    cityNameValue = inputName.value
-})
+inputName.addEventListener('change', () => cityNameValue = inputName.value)
 
 const getWeather = async () => {
     let finalURL = baseURL + cityNameValue + finalApiKey
@@ -77,14 +75,31 @@ const getWeather = async () => {
         } else if (weather[0].main === 'Rain') {
             tempIcon.innerHTML = '<i class="fas fa-cloud-showers-heavy"></i>';
             temp.appendChild(tempIcon)
+        } else {
+            tempIcon.innerHTML = '<i class="fas fa-history"></i>';
+            temp.appendChild(tempIcon)
         }
 
         // Appending Current Climate
         let current_climate = mainTemp.appendChild(currentClimate);
         current_climate.innerText = `Mostly ${weather[0].main}`;
-        // Appending dummy code 
-        let dummy = mainTemp.appendChild(dummyCode);
-        dummy.innerText = '16% chance to rain later'
+
+        // Appending dummy code
+        if (weather[0].main === 'Haze') {
+            let dummy = mainTemp.appendChild(dummyCode);
+            dummy.innerText = '17% chance to rain later'
+        } else if (weather[0].main === 'Clouds') {
+            let dummy = mainTemp.appendChild(dummyCode);
+            dummy.innerText = '79% chance to rain later'
+        } else if (weather[0].main === 'Clear') {
+            let dummy = mainTemp.appendChild(dummyCode);
+            dummy.innerText = '6% chance to rain later'
+        } else {
+            let dummy = mainTemp.appendChild(dummyCode);
+            dummy.innerText = '2% chance to rain later'
+        }
+
+        // Items for the other-half
 
 
     } catch (err) {

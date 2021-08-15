@@ -14,16 +14,8 @@
 }
 
 .tempIcon{
-    color: #293241;
-}
-
-.others {
-    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 5px #444;
-    display: grid;
-    grid-template-columns: 33% 33% auto;
-    justify-items: center;
+    margin-right: 3rem;
+    color: #22223b;
 }
 
 /* JS CLASSES STYLE  */
@@ -49,7 +41,7 @@
     margin: 10px;
     font-family: 'Patua One', cursive;
     font-size: 8rem;
-    font-weight: bolder;
+    font-weight: lighter;
     display: flex;
     justify-content: space-between;
 }
@@ -59,11 +51,21 @@
     font-weight: light;
     border-top: 3px solid #343A40;
     border-bottom: 3px solid #343A40;
-    opacity: 0.85;
+    opacity: 0.85;  
 }
 
 .dummyCode{
-    padding-top: 15px;
-    opacity: 0.85;
-    font-weight: 3px;
+    text-align: right;
+    opacity: 0.75;
+    font-weight: bolder;
+}
+
+/* Lower Bottom Styles  */
+.others {
+    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px #444;
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+    justify-items: center;
 }
