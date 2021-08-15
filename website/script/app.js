@@ -44,6 +44,13 @@ latLon.setAttribute('class', 'lat_lon');
 
 function gettingTempValues(min, max, humidity) {
     let others = document.querySelector('.others');
+    let othersChilds = others.childNodes;
+    if (othersChilds.length === 3) {
+        for (let j = 0; j < 3; j++) {
+            others.removeChild(others.childNodes[0])
+        }
+    }
+
 
     for (let i = 0; i < 3; i++) {
         let mainOthersDiv = document.createElement('DIV');
@@ -70,7 +77,7 @@ function gettingTempValues(min, max, humidity) {
 
                 tempHead.innerText = 'HUMIDITY';
                 minTempIcon.innerHTML = '<i class="fas fa-tint"></i>'
-                tempHeadText.innerText = humidity
+                tempHeadText.innerText = `${humidity}`
 
                 break;
             case 2:
