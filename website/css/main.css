@@ -23,6 +23,6 @@ body{
 
 #card{
     display: grid;
-    grid-template-columns: 27rem auto;
+    grid-template-columns: 30rem auto;
     grid-gap: 20px;
 }

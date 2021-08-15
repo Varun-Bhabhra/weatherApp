@@ -24,11 +24,15 @@ fixedDate.setAttribute('class', 'date')
 fixedDate.append(date)
 mainTemp.append(fixedDate);
 
+// Creating Elements to append
 let cityName = document.createElement('H1');
 cityName.setAttribute('class', 'cityName');
 
 let temp = document.createElement('H1');
 temp.setAttribute('class', 'mainTemperature');
+
+let tempIcon = document.createElement('SPAN');
+tempIcon.setAttribute('class', 'tempIcon');
 
 let currentClimate = document.createElement('SPAN');
 currentClimate.setAttribute('class', 'currentClimate');
@@ -60,6 +64,21 @@ const getWeather = async () => {
 
         // Appending Main Temperature
         mainTemp.appendChild(temp).innerText = Math.trunc(temperature - 272.15) + '°';
+        // Appending Icon
+        if (weather[0].main === 'Haze') {
+            tempIcon.innerHTML = '<i class="fas fa-smog"></i>';
+            temp.appendChild(tempIcon)
+        } else if (weather[0].main === 'Clouds') {
+            tempIcon.innerHTML = '<i class="fas fa-cloud-sun"></i>';
+            temp.appendChild(tempIcon)
+        } else if (weather[0].main === 'Clear') {
+            tempIcon.innerHTML = '<i class="fas fa-sun"></i>';
+            temp.appendChild(tempIcon)
+        } else if (weather[0].main === 'Rain') {
+            tempIcon.innerHTML = '<i class="fas fa-cloud-showers-heavy"></i>';
+            temp.appendChild(tempIcon)
+        }
+
         // Appending Current Climate
         let current_climate = mainTemp.appendChild(currentClimate);
         current_climate.innerText = `Mostly ${weather[0].main}`;
