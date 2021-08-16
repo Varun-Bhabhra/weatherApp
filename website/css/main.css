@@ -1,6 +1,5 @@
 @import './input.css';
 @import './output.css';
-@import url('./media.css');
 
 *{
     box-sizing: border-box;
@@ -12,14 +11,13 @@ body{
     font-family: 'Roboto', cursive;
     letter-spacing: 4px;
     background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
-    /* color:#081C15; */
     overflow: hidden;
     margin: 20px;
 }
 
 #card{
     display: grid;
-    grid-template-columns: 30rem auto;
+    grid-template-columns: 36rem auto;
     grid-gap: 20px;
 }
 
