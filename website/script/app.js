@@ -1,8 +1,8 @@
 // Presonal API key and API URL from OpenWeatherMap
-let apiKey = '32363641d307b29e83a5321ec18c1249'
-let baseURL = 'http://api.openweathermap.org/data/2.5/weather?q='
-let finalApiKey = `&appid=${apiKey}`;
-let cityNameValue = "Pune";
+const apiKey = '32363641d307b29e83a5321ec18c1249'
+const baseURL = 'http://api.openweathermap.org/data/2.5/weather?q='
+const finalApiKey = `&appid=${apiKey}`;
+let cityNameValue = "kolkata";
 
 // Constant Selectors
 const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -52,7 +52,6 @@ function gettingTempValues(min, max, humidity) {
         }
     }
 
-
     for (let i = 0; i < 3; i++) {
         let mainOthersDiv = document.createElement('DIV');
         mainOthersDiv.setAttribute('class', 'othersDiv');
@@ -71,7 +70,7 @@ function gettingTempValues(min, max, humidity) {
 
                 tempHead.innerText = 'MIN TEMP.';
                 minTempIcon.innerHTML = '<i class="fas fa-temperature-low"></i>'
-                tempHeadText.innerText = `${Math.trunc(min - 272.15)}°`;
+                tempHeadText.innerText = `${Math.trunc(min)}°C`;
 
                 break;
             case 1:
@@ -85,7 +84,7 @@ function gettingTempValues(min, max, humidity) {
 
                 tempHead.innerText = 'MAX TEMP.';
                 minTempIcon.innerHTML = '<i class="fas fa-temperature-high"></i>'
-                tempHeadText.innerText = `${Math.trunc(max - 272.15)}°`;
+                tempHeadText.innerText = `${Math.trunc(max)}°C`;
 
                 break;
         }
@@ -100,7 +99,7 @@ function gettingTempValues(min, max, humidity) {
 inputName.addEventListener('change', () => cityNameValue = inputName.value)
 
 const getWeather = async () => {
-    let finalURL = baseURL + cityNameValue + finalApiKey
+    let finalURL = baseURL + cityNameValue + finalApiKey + '&units=metric'
     const response = await fetch(finalURL);
     try {
         const allData = await response.json()
@@ -115,7 +114,7 @@ const getWeather = async () => {
         city.innerText = `${name}, ${country} `;
 
         // Appending Main Temperature
-        mainTemp.appendChild(temp).innerText = Math.trunc(temperature - 272.15) + '°';
+        mainTemp.appendChild(temp).innerText = Math.trunc(temperature) + '°C';
         // Appending Icon
         if (weather[0].main === 'Haze') {
             tempIcon.innerHTML = '<i class="fas fa-smog"></i>';

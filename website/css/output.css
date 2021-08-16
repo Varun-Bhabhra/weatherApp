@@ -2,7 +2,8 @@
     color: #081C15;
     display: grid;
     /* grid-template-rows: 23.2rem 23.3rem ; */
-    grid-template-rows: 25.5rem 25.5rem ;
+    grid-template-rows: repeat(2, auto) ;
+    /* grid-template-rows: 25.5rem 25.5rem ; */
     grid-gap: 15px;
 }
 
