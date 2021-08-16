@@ -1,16 +1,14 @@
 .input{
-    /* background: linear-gradient(to bottom, #7251B5, #D2B7E5); */
-    /* background: linear-gradient(to bottom, #2E3192, #1BFFFF); */
-    background: linear-gradient(to top, #11998E, #38EF7D);
+    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
     height: 96vh;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px 2px #444;
+    box-shadow: 0px 0px 15px 2px #081C15;
     font-size: 25px;
     display: grid;
 }
 
 .ask{
-    background-color: #b0ffb0;
+    background-color: #f9c74f;
 }
 
 .zipCode{
@@ -24,7 +22,7 @@
 
 input{
     font-family: 'Roboto', sans-serif;
-    background-color: #B7E4C7;
+    background-color: #f3de8a;
     font-size: 15px;
     font-weight: bolder;
     text-align: center;
@@ -49,7 +47,7 @@ input:focus{
 }
 
 .middle p {
-    background-color: #b0ffb0;
+    background-color: #f9c74f;
 }
 
 .options{
@@ -65,7 +63,7 @@ button{
     border: none;
     font-size: 30px;
     font-weight: bold;
-    background-color: #b0ffb0;
+    background-color: #f9c74f;
     color: #081C15;
     border-radius: 30px;
     letter-spacing: 5px;

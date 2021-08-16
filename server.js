@@ -23,6 +23,6 @@ function listening() {
 };
 
 // TODO-ROUTES!
-app.get('/all', function (req, res) {
-    res.send(projectData);
+app.get('/all', (req, res) => {
+    res.send(index.html);
 })

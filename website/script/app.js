@@ -2,7 +2,7 @@
 let apiKey = '32363641d307b29e83a5321ec18c1249'
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?q='
 let finalApiKey = `&appid=${apiKey}`;
-let cityNameValue = "kolkata";
+let cityNameValue = "Pune";
 
 // Constant Selectors
 const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -42,6 +42,7 @@ dummyCode.setAttribute('class', 'dummyCode');
 let latLon = document.createElement('SPAN');
 latLon.setAttribute('class', 'lat_lon');
 
+// Events and Function Calls
 function gettingTempValues(min, max, humidity) {
     let others = document.querySelector('.others');
     let othersChilds = others.childNodes;
@@ -93,11 +94,9 @@ function gettingTempValues(min, max, humidity) {
         mainOthersDiv.appendChild(tempHeadText)
         mainOthersDiv.appendChild(minTempIcon);
         others.appendChild(mainOthersDiv);
-        // console.log(mainOthersDiv)
     }
 }
 
-// Events and Function Calls
 inputName.addEventListener('change', () => cityNameValue = inputName.value)
 
 const getWeather = async () => {

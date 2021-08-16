@@ -1,15 +1,14 @@
 .output{
     color: #081C15;
     display: grid;
-    grid-template-rows: 23.5rem 23.5rem ;
+    /* grid-template-rows: 23.2rem 23.3rem ; */
+    grid-template-rows: 25.5rem 25.5rem ;
     grid-gap: 15px;
 }
 
 .mainTemp {
     padding: 10px 20px 20px 20px;
-    /* background: linear-gradient(to bottom, #7251B5, #D2B7E5); */
-    /* background: linear-gradient(to bottom, #2E3192, #1BFFFF); */
-    background: linear-gradient(to bottom, #11998E, #38EF7D);
+    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
     border-radius: 10px;
     box-shadow: 0px 0px 15px 2px #081C15;
 }
@@ -29,7 +28,7 @@
     font-size: 15px;
     width: 14rem;
     border-radius: 10px;
-    background-color: #b0ffb0;
+    background-color: #f9c74f;
 }
 
 .cityName{
@@ -70,9 +69,7 @@
 
 /* Lower Bottom Styles  */
 .others {
-    /* background: linear-gradient(to bottom, #D2B7E5, #DEC9E9); */
-    /* background: linear-gradient(to top, #2E3192, #1BFFFF); */
-    background: linear-gradient(to top, #11998E, #38EF7D);
+    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
     border-radius: 10px;
     box-shadow: 0px 0px 20px 5px #081C15;
     display: grid;

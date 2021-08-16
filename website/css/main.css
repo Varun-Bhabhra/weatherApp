@@ -1,5 +1,6 @@
 @import './input.css';
 @import './output.css';
+@import url('./media.css');
 
 *{
     box-sizing: border-box;
@@ -10,11 +11,8 @@
 body{
     font-family: 'Roboto', cursive;
     letter-spacing: 4px;
-    /* background: linear-gradient(to bottom, #D2B7E5, #DEC9E9); */
-    /* background: linear-gradient(to bottom, #5f63da, #1BFFFF); */
-    /* background: linear-gradient(to top, #02AABD, #00CDAC); */
-    background-color: #2D6A4F;
-    color:#081C15;
+    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
+    /* color:#081C15; */
     overflow: hidden;
     margin: 20px;
 }
@@ -23,4 +21,59 @@ body{
     display: grid;
     grid-template-columns: 30rem auto;
     grid-gap: 20px;
+}
+
+@media (min-width: 280px) and (max-width: 740px){
+    #card{
+        width: 100%;
+        grid-template-columns: auto;
+    }
+    /* INPUT SIDE STYLES  */
+    .ask{
+        width: 100%;
+        text-align: center;
+        height: 30px;
+        font-size: 22px;
+    }
+    input{
+        margin: 0;
+        padding: 0;
+        border-radius: 3px;
+    }
+    .input{
+        height: 50vh;
+        width: 25rem;
+    }
+    .zipCode{
+        width: 23rem;
+        box-shadow: none;
+    }
+    button{
+        margin: 0;
+        padding: 0;
+        width: 98%;
+        height: 100%;
+        font-size: 20px;
+        border-radius: 0;
+        border-bottom-left-radius:10px ;
+        border-bottom-right-radius: 10px;
+    }
+    button:hover{
+        box-shadow: none;
+    }
+    .middle{
+        display: none;
+    }
+
+    /* OUTPUT SIDE STYLING  */
+    .mainTemp{
+        width: 25rem;
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    .others{
+        display: none;
+    }
 }
