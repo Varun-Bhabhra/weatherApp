@@ -18,7 +18,7 @@ body{
 
 #card{
     display: grid;
-    grid-template-columns: 29rem auto;
+    grid-template-columns: 27rem auto;
     grid-gap: 20px;
 }
 
@@ -71,6 +71,9 @@ body{
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
+    }
+    .mainTemperature{
+        font-size: 6rem;
     }
     .others{
         display: none;

@@ -1,9 +1,8 @@
 .input{
-    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
-    /* height: 96vh; */
-    height: 100%;
+    /* background: linear-gradient(to bottom, #7251B5, #D2B7E5); */
+    height: 96vh;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px 2px #081C15;
+    /* box-shadow: 0px 0px 15px 2px #081C15; */
     font-size: 25px;
     display: grid;
 }
@@ -13,11 +12,12 @@
 }
 
 .zipCode{
+    width: 25rem;
     margin: 20px;
     padding: 20px;
     display: grid;
     justify-items: center;
-    box-shadow: 0px 0px 5px 2px #081C15;
+    /* box-shadow: 0px 0px 5px 2px #081C15; */
     border-radius: 10px;
 }
 
@@ -41,6 +41,7 @@ input:focus{
 
 /* Lower half of the input section  */
 .middle{
+    width: 25rem;
     margin: 10px;
     padding: 18px;
     align-items: left;
@@ -48,6 +49,8 @@ input:focus{
 }
 
 .middle p {
+    width: 21rem;
+    font-size: 18px;
     background-color: #f9c74f;
 }
 
@@ -57,7 +60,7 @@ input:focus{
 }
 
 button{
-    width: 22rem;
+    width: 19rem;
     height: 5rem;
     margin: 20px 60px;
     padding: 20px;

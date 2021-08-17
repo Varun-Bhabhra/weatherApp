@@ -9,9 +9,9 @@
 
 .mainTemp {
     padding: 10px 20px 20px 20px;
-    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
+    /* background: linear-gradient(to bottom, #7251B5, #D2B7E5); */
     border-radius: 10px;
-    box-shadow: 0px 0px 15px 2px #081C15;
+    /* box-shadow: 0px 0px 15px 2px #081C15; */
 }
 
 .tempIcon{
@@ -70,9 +70,9 @@
 
 /* Lower Bottom Styles  */
 .others {
-    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
+    /* background: linear-gradient(to bottom, #D2B7E5, #DEC9E9); */
     border-radius: 10px;
-    box-shadow: 0px 0px 20px 5px #081C15;
+    /* box-shadow: 0px 0px 20px 5px #081C15; */
     display: grid;
     grid-template-columns: 33% 33% auto;
     justify-items: center;
