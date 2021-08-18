@@ -12,15 +12,15 @@ body{
     font-family: 'Roboto', cursive;
     letter-spacing: 4px;
     background-color: #D2B7E5;
-    overflow: hidden;
-    margin: 20px;
+    margin:20px 0px;
 }
 
 #card{
-    width: 100%;
     display: grid;
-    grid-template-columns: 27rem 65rem;
-    grid-gap: 20px;
+    width: 100%;
+    height: 90vh;
+    grid-template-columns: 33% 66%;
+    grid-gap: 15px;
 }
 
 @media(max-width: 740px){
