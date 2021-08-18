@@ -2,12 +2,12 @@
 const apiKey = '32363641d307b29e83a5321ec18c1249'
 const baseURL = 'http://api.openweathermap.org/data/2.5/weather?q='
 const finalApiKey = `&appid=${apiKey}`;
-let cityNameValue = "kolkata";
+let cityNameValue = "";
 
 // Constant Selectors
 const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"];
-const inputName = document.querySelector("#name")
+const inputName = document.querySelector("#name");
 const generateButton = document.querySelector('button');
 const mainTemp = document.querySelector('.mainTemp');
 const minTemp = document.querySelector('.minTemp');
@@ -96,18 +96,61 @@ function gettingTempValues(min, max, humidity) {
     }
 }
 
-inputName.addEventListener('change', () => cityNameValue = inputName.value)
+function test() {
 
-const getWeather = async () => {
-    let finalURL = baseURL + cityNameValue + finalApiKey + '&units=metric'
-    const response = await fetch(finalURL);
+    let finalURL = baseURL + inputName.value + finalApiKey + '&units=metric';
+
+    getWeather(finalURL)
+        .then((allData) => {
+            const temperature = allData.main.temp;
+            const { name, coord, main, sys, weather } = allData;
+            const { lon, lat } = coord;
+            const { temp_min, temp_max, humidity } = main;
+            const { country } = sys;
+            save("/create", {
+                temperature: temperature,
+                name: name,
+                coord: coord,
+                main: main,
+                sys: sys,
+                weather: weather,
+                lon: lon,
+                lat: lat,
+                temp_min: temp_min,
+                temp_max: temp_max,
+                humidity: humidity,
+                country: country
+            });
+        })
+        .then(() => getData("/all"));
+}
+
+// QueryWeather Service
+async function getWeather(finalURL) {
+
+    const res = await fetch(finalURL);
+    const weatherData = await res.json();
+    return weatherData;
+}
+
+// save function,
+const save = async (url, data) => {
+    const res = await fetch(url, {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    });
+    // const saveResult = await res.json();
+};
+
+const getData = async (url) => {
+    const response = await fetch(url);
     try {
-        const allData = await response.json()
-        const temperature = Number(allData.main.temp);
-        const { name, coord, main, sys, weather } = allData;
-        const { lon, lat } = coord;
-        const { temp_min, temp_max, humidity } = main;
-        const { country } = sys;
+        const allData = await response.json();
+        const { temperature, name, coord, main, sys, weather, lon, lat, temp_min, temp_max, humidity, country } = allData;
 
         // Appending City Name
         let city = mainTemp.appendChild(cityName)
@@ -148,4 +191,4 @@ const getWeather = async () => {
         console.log('error', err)
     }
 }
-generateButton.addEventListener("click", getWeather);
+generateButton.addEventListener("click", test);
