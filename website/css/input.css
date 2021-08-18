@@ -1,6 +1,6 @@
 .input{
-    /* background: linear-gradient(to bottom, #7251B5, #D2B7E5); */
-    height: 96vh;
+    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
+    height: 85vh;
     border-radius: 10px;
     /* box-shadow: 0px 0px 15px 2px #081C15; */
     font-size: 25px;
@@ -52,6 +52,7 @@ input:focus{
     width: 21rem;
     font-size: 18px;
     background-color: #f9c74f;
+    /* background-color: #ddbea9; */
 }
 
 .options{

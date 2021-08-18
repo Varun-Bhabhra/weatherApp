@@ -1,17 +1,14 @@
 .output{
     color: #081C15;
     display: grid;
-    /* grid-template-rows: 23.2rem 23.3rem ; */
     grid-template-rows: repeat(2, auto) ;
-    /* grid-template-rows: 25.5rem 25.5rem ; */
     grid-gap: 15px;
 }
 
 .mainTemp {
     padding: 10px 20px 20px 20px;
-    /* background: linear-gradient(to bottom, #7251B5, #D2B7E5); */
+    background: linear-gradient(to bottom, #7251B5, #D2B7E5);
     border-radius: 10px;
-    /* box-shadow: 0px 0px 15px 2px #081C15; */
 }
 
 .tempIcon{
@@ -70,9 +67,8 @@
 
 /* Lower Bottom Styles  */
 .others {
-    /* background: linear-gradient(to bottom, #D2B7E5, #DEC9E9); */
+    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
     border-radius: 10px;
-    /* box-shadow: 0px 0px 20px 5px #081C15; */
     display: grid;
     grid-template-columns: 33% 33% auto;
     justify-items: center;
@@ -101,6 +97,4 @@
 .tempHeadText{
     font-size: 2rem;
     font-weight: normal;
-    border-top: 2px solid #081C15;
-    border-bottom: 2px solid #081C15;
 }

@@ -11,14 +11,15 @@
 body{
     font-family: 'Roboto', cursive;
     letter-spacing: 4px;
-    background: linear-gradient(to bottom, #D2B7E5, #DEC9E9);
+    background-color: #D2B7E5;
     overflow: hidden;
     margin: 20px;
 }
 
 #card{
+    width: 100%;
     display: grid;
-    grid-template-columns: 27rem auto;
+    grid-template-columns: 27rem 65rem;
     grid-gap: 20px;
 }
 
@@ -67,7 +68,7 @@ body{
     /* OUTPUT SIDE STYLING  */
     .mainTemp{
         width: 25rem;
-        height: 100vh;
+        height: 65vh;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
