@@ -75,9 +75,11 @@ body{
         flex-flow: column nowrap;
         justify-content: space-between;
     }
+
     .mainTemperature{
         font-size: 6rem;
     }
+    
     .others{
         display: none;
     }
