@@ -191,5 +191,4 @@ const getData = async (url) => {
         console.log('error', err)
     }
 }
-
 generateButton.addEventListener("click", test);
