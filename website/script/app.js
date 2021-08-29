@@ -96,7 +96,6 @@ function gettingTempValues(min, max, humidity) {
     }
 }
 
-
 function test() {
 
     let finalURL = baseURL + inputName.value + finalApiKey + '&units=metric';
