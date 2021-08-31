@@ -89,6 +89,8 @@ function gettingTempValues(min, max, humidity) {
                 break;
         }
 
+
+
         mainOthersDiv.appendChild(tempHead);
         mainOthersDiv.appendChild(tempHeadText)
         mainOthersDiv.appendChild(minTempIcon);
