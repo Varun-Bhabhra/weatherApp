@@ -89,15 +89,12 @@ function gettingTempValues(min, max, humidity) {
                 break;
         }
 
-
-
         mainOthersDiv.appendChild(tempHead);
         mainOthersDiv.appendChild(tempHeadText)
         mainOthersDiv.appendChild(minTempIcon);
         others.appendChild(mainOthersDiv);
     }
 }
-
 
 function test() {
 
