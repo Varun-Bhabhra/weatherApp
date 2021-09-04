@@ -4,6 +4,8 @@ const baseURL = 'http://api.openweathermap.org/data/2.5/weather?q='
 const finalApiKey = `&appid=${apiKey}`;
 let cityNameValue = "";
 
+
+
 // Constant Selectors
 const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"];
