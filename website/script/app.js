@@ -14,7 +14,6 @@ const minTemp = document.querySelector('.minTemp');
 const maxTemp = document.querySelector('.maxTemp');
 const humidity = document.querySelector('.humidity');
 
-
 // Variable Decleration
 let d = new Date();
 let date = `${d.getDate()} ${monthNames[d.getMonth()]},${d.getFullYear()}`;
