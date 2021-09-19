@@ -62,8 +62,6 @@ function gettingTempValues(min, max, humidity) {
         const tempHeadText = document.createElement('H3');
         tempHeadText.setAttribute('class', 'tempHeadText');
 
-
-
         const minTempIcon = document.createElement('P');
         minTempIcon.setAttribute('class', 'minIcon');
 
