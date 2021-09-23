@@ -52,8 +52,6 @@ function gettingTempValues(min, max, humidity) {
         }
     }
 
-
-
     for (let i = 0; i < 3; i++) {
         let mainOthersDiv = document.createElement('DIV');
         mainOthersDiv.setAttribute('class', 'othersDiv');
