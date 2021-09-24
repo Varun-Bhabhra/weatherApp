@@ -176,6 +176,8 @@ const getData = async (url) => {
             temp.appendChild(tempIcon)
         }
 
+
+
         // Appending Current Climate
         let current_climate = mainTemp.appendChild(currentClimate);
         current_climate.innerText = `Mostly ${weather[0].main} `;
